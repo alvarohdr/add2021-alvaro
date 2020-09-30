@@ -21,3 +21,4 @@ ___
 ![](img/img01.png)
 
 - Ir al servidor VNC y usar el comando `netstat -n` para ver las conexiones VNC con el cliente.
+![](img/img02.png)
