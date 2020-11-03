@@ -1,0 +1,14 @@
+UUID=4e1de07a-c040-4dab-82e7-ef7cc63a544a  /                       btrfs  defaults                      0  0
+UUID=4e1de07a-c040-4dab-82e7-ef7cc63a544a  /.snapshots             btrfs  subvol=/@/.snapshots          0  0
+UUID=930539c9-ca6c-494e-98b0-81f46524aec5  swap                    swap   defaults                      0  0
+UUID=4e1de07a-c040-4dab-82e7-ef7cc63a544a  /var                    btrfs  subvol=/@/var                 0  0
+UUID=4e1de07a-c040-4dab-82e7-ef7cc63a544a  /usr/local              btrfs  subvol=/@/usr/local           0  0
+UUID=4e1de07a-c040-4dab-82e7-ef7cc63a544a  /tmp                    btrfs  subvol=/@/tmp                 0  0
+UUID=4e1de07a-c040-4dab-82e7-ef7cc63a544a  /srv                    btrfs  subvol=/@/srv                 0  0
+UUID=4e1de07a-c040-4dab-82e7-ef7cc63a544a  /root                   btrfs  subvol=/@/root                0  0
+UUID=4e1de07a-c040-4dab-82e7-ef7cc63a544a  /opt                    btrfs  subvol=/@/opt                 0  0
+UUID=4e1de07a-c040-4dab-82e7-ef7cc63a544a  /home                   btrfs  subvol=/@/home                0  0
+UUID=4e1de07a-c040-4dab-82e7-ef7cc63a544a  /boot/grub2/x86_64-efi  btrfs  subvol=/@/boot/grub2/x86_64-efi  0  0
+UUID=4e1de07a-c040-4dab-82e7-ef7cc63a544a  /boot/grub2/i386-pc     btrfs  subvol=/@/boot/grub2/i386-pc  0  0
+UUID=E1B1-4026                             /boot/efi               vfat   defaults                      0  2
+//172.19.21.31/castillo		               /mnt/remoto21/castillo  cifs   username=soldado1,password=soldado1 0 0
