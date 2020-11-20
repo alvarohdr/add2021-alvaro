@@ -19,7 +19,7 @@
 
 ![](img/03.png)
 
-* Ejecuramos el comando `dscreate -v from-file /root/instance.inf` para crear nuestra instancia desde el archivo `instance.inf` y con `dsctl localhost status` comprobaremos su estado.
+* Ejecutamos el comando `dscreate -v from-file /root/instance.inf` para crear nuestra instancia desde el archivo `instance.inf` y con `dsctl localhost status` comprobaremos su estado.
 
 ![](img/04.png)
 
