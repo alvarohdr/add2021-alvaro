@@ -1,0 +1,44 @@
+#!/usr/bin/env ruby
+
+require 'telegram/bot'
+
+# token:
+# 1. Write your TOKEN value into "token" variable or
+# 2. Create a local file "hiden.token" with your TOKEN value inside
+token = `cat /etc/bot21/token`.strip
+bot_username = '@Prueba_alvarohdr'
+
+puts "[INFO] Running bot #{$0}..."
+
+Telegram::Bot::Client.run(token) do |bot|
+  bot.listen do |message|
+    options = message.text.split(" ")
+    puts " => #{message.text}"
+    if options[0] == "/help"
+      say = "
+      	Usage:
+      		[ORDER] [COMMAND]
+				Orders:
+				  /help, mostrar esta ayuda.
+				  /version, mostrar información sobre el autor del script y fecha de creacion.
+          /ip, muestra la IP del sistema.
+				  /usuario [NAME], mostrar un mensaje de bienvenida.
+				  /comando [COMMAND], ejecuta un comando del sistema."
+      
+      bot.api.send_message(chat_id: message.chat.id, text: say)
+    elsif options[0] == "/version"
+      bot.api.send_message(chat_id: message.chat.id, text: "Autor: alvarohdr\nFecha:22/02/2021")
+    elsif options[0] == "/usuario"
+      say = "Bienvenido, #{options[1]}"
+      bot.api.send_message(chat_id: message.chat.id, text: say)
+    elsif options[0] == "/ip"
+	  	a = `ip a | grep eth1 | grep inet`.split(" ")
+    	bot.api.send_message(chat_id: message.chat.id, text: "IP: #{a[1]}")
+    elsif options[0] == "/comando"
+    	options.delete_at(0)
+    	a = options.join(" ")
+    	say = `#{a}`
+      bot.api.send_message(chat_id: message.chat.id, text: say)
+    end
+  end
+end

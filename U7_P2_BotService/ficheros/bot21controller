@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+a = `systemctl is-active bot21.service`.chop
+
+if a == "inactive"
+  system ("systemctl start bot21.service")
+  a = Time.now()
+  say = "bot21controller - Fecha: #{a} - Iniciando el servicio bot21..."
+  system ("echo #{say} >> /etc/bot21/log")
+else
+  a = Time.now()
+  say = "bot21controller - Fecha: #{a} - No hacer nada"
+  system ("echo #{say} >> /etc/bot21/log")
+end

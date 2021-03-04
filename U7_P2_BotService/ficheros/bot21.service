@@ -1,0 +1,10 @@
+[Unit]
+Description = Servicio Bot de Alvaro (alumno21)
+After=network.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/ruby /usr/local/bin/bot21d
+
+[Install]
+WantedBy=multi-user.target
